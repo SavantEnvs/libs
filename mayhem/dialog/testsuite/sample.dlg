@@ -1,0 +1,11 @@
+[start]
+<guard>Halt! Who goes there?
+{ask}^A friend@friend
+^^Nobody@start
+#alarm#
+@end
+[friend]
+<guard>Pass.
+@start
+[end]
+<guard>Bye.

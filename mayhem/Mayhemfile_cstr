@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: cstr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cstr/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_cstr
+    libfuzzer: true
+    timeout: 5

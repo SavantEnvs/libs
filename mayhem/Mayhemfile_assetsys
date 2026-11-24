@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: assetsys
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/assetsys/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_assetsys
+    libfuzzer: true
+    timeout: 5

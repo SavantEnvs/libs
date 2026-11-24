@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: dialog
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dialog/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_dialog
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: opl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/opl/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_opl
+    libfuzzer: true
+    timeout: 5

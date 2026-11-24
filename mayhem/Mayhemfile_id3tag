@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: id3tag
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/id3tag/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_id3tag
+    libfuzzer: true
+    timeout: 5

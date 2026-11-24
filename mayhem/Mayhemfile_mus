@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: mus
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mus/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_mus
+    libfuzzer: true
+    timeout: 5

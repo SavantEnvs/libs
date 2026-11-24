@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: speech
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/speech/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_speech
+    libfuzzer: true
+    timeout: 5

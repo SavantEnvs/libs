@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: ini
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ini/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_ini
+    libfuzzer: true
+    timeout: 5

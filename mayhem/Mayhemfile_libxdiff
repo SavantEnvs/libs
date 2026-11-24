@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: libxdiff
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/libxdiff/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_libxdiff
+    libfuzzer: true
+    timeout: 5

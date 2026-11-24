@@ -1,0 +1,9 @@
+project: savantenvs/libs
+target: lzma
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lzma/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_lzma
+    libfuzzer: true
+    timeout: 5
